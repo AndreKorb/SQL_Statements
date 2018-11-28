@@ -1,0 +1,25 @@
+alter user ITSM_ITDZ_T0005 identified by ITSMaixb1855;
+
+
+--Liste aller Benutzerkennungen
+select
+    ac.ACCOUNT_ID
+    ,ac.USR_ID
+    ,ac.USERNAME as Kennung
+from acc ac;
+
+--Liste aller Berechtigungsgruppen
+select 
+      pg.PRIV_GRP_ID
+      ,pg.PRIV_GRP_SC
+      ,pg.PRIV_GRP_N
+from priv_grp pg;
+
+select 
+  pg.priv_grp_id
+  ,pg.priv_grp_n
+  ,pga.priv_grp_acc_id
+  ,pga.priv_grp_id 
+from priv_grp pg INNER JOIN priv_grp_acc pga
+on pg.priv_grp_id = pga.priv_grp_id
+order by pg.PRIV_GRP_N;
