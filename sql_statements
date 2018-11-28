@@ -1,0 +1,16 @@
+alter user ITSM_ITDZ_T0005 identified by ITSMaixb1855;
+
+
+--Liste aller Benutzerkennungen
+select
+    ac.ACCOUNT_ID
+    ,ac.USR_ID
+    ,ac.USERNAME as Kennung
+from acc ac;
+
+--Liste aller Berechtigungsgruppen
+select 
+      pg.PRIV_GRP_ID
+      ,pg.PRIV_GRP_SC
+      ,pg.PRIV_GRP_N
+from priv_grp pg;
