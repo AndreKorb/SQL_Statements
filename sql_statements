@@ -15,6 +15,7 @@ select
       ,pg.PRIV_GRP_N
 from priv_grp pg;
 
+
 select 
   pg.priv_grp_id
   ,pg.priv_grp_n
@@ -23,3 +24,7 @@ select
 from priv_grp pg INNER JOIN priv_grp_acc pga
 on pg.priv_grp_id = pga.priv_grp_id
 order by pg.PRIV_GRP_N;
+
+eof
+end of file
+=======
